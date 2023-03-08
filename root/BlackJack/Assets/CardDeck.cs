@@ -2,20 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CardDeck : MonoBehaviour
+public class CardDeck
 {
     //stores the strings of the names of cards
     string[] cardValue = new string[] { "Ace", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "jack", "queen", "king"};
     string[] suites = new string[] { "hearts", "spades", "diamonds", "clubs" };
     List<int> deck = new List<int>();
-    // Start is called before the first frame update
-    void Start()
+    public List<int> Deck
     {
-        deck = GenerateDeck();
-        Debug.Log(deck.Count);
-        Debug.Log(Parser(deck[DrawRandomCard()]));
-        Debug.Log(deck.Count);
+        get { return deck; }
     }
+
+
+    //deck = GenerateDeck();
+    //Debug.Log(deck.Count);
+    //Debug.Log(Parser(deck[DrawRandomCard()]));
+    //Debug.Log(deck.Count);
 
     public int DrawRandomCard()
     {

@@ -6,7 +6,8 @@ using UnityEngine;
 public class Player
 {
     [SerializeField]
-    List<int> hand = new List<int>();
+    public List<int> playerHand = new List<int>();
+    public int playerPointValue;
 
     public void CalculateHand()
     {
